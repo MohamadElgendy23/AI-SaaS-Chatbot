@@ -36,6 +36,7 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
             signed: true,
             path: "/",
         });
+        
         const token = createToken(user._id.toString(), user.email, "7d");
         const expires = new Date();
         expires.setDate(expires.getDate() + 7);
