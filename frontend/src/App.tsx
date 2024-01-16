@@ -7,7 +7,9 @@ import Chat from "./pages/Chat";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  return <main>
+
+  return (
+   <main>
     <Header />
     <Routes>
       <Route path="/" element={<Home />}/>
@@ -17,6 +19,7 @@ function App() {
       <Route path="*" element={<NotFound />}/>
     </Routes>
   </main>
+  );
 }
 
 export default App
