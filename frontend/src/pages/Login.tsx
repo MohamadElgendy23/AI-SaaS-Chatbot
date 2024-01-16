@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react'
 import { } from "@mui/material";
+import CustomizedInput from '../components/shared/CustomizedInput';
 
 function Login() {
   return (
@@ -12,6 +13,8 @@ function Login() {
         <form style={{margin: "auto", padding: "30px", boxShadow: "10px 10px 20px #000", borderRadius: "10px", border: "none"}}>
           <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
             <Typography variant="h4" textAlign="center" padding={2} fontWeight={600}>Login</Typography>
+            <CustomizedInput type="email" name="email" label="Email" />
+            <CustomizedInput type="password" name="password" label="Password"/>
           </Box>
         </form>
       </Box>
