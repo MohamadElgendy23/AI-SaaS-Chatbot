@@ -12,11 +12,13 @@ function Login() {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
     try {
-      toast.loading("Signing In");
+      toast.loading("Signing In", { id: "login"});
       await auth?.login(email, password);
+      toast.success("Signed In Successfully", { id: "success"});
     }
     catch (error) {
-
+      console.log(error);
+      toast.error("Signing In Failed", { id: "failed"});
     }
   };
   return (

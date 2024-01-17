@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// api handler for logging in user
+// api client for logging in user
 export const loginUser = async (email: string, password: string) => {
     const res = await axios.post("/user/login", { email, password });
     if (res.status !== 200)
